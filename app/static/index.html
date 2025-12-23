@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Opportunities | AI Market Analysis</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Marked.js for Markdown Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+
+
+        <main>
+            <section class="search-section">
+                <div class="glass-card search-card">
+                    <div class="input-group">
+                        <input type="text" id="sectorInput" placeholder="Enter a sector (e.g. Solar Energy, Fintech)..."
+                            autocomplete="off">
+                        <button id="searchBtn">
+                            <span class="btn-text">Analyze</span>
+                            <div class="spinner hidden" id="loadingSpinner"></div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section hidden" id="resultsSection">
+                <div class="glass-card result-card">
+                    <div class="card-header">
+                        <h2 id="resultTitle">Analysis Report</h2>
+                        <span class="badge">Live AI-Generated</span>
+                    </div>
+                    <div class="markdown-content" id="reportContent">
+                        <!-- Content will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="error-section hidden" id="errorSection">
+                <div class="glass-card error-card">
+                    <div class="error-icon">⚠️</div>
+                    <h3 id="errorTitle">Oops! Something went wrong.</h3>
+                    <p id="errorMessage">We couldn't fetch the analysis.</p>
+                    <div id="timerContainer" class="hidden">
+                        <p>Retry in <span id="countdown">0</span>s</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="timerBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a> & <a
+                    href="https://deepmind.google/technologies/gemini/" target="_blank">Google Gemini</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+google-generativeai
+duckduckgo-search
+slowapi
+python-jose
+pydantic-settings
+python-multipart
+requests
+python-dotenv
